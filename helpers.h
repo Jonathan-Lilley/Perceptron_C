@@ -4,8 +4,14 @@
 using namespace std;
 
 ///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////// generic functions ///////////////////////////
+//////////////////// generic functions and structs ////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
+
+//data pair struct to help with pairing characters with ints
+struct IntCharPair{
+	int value;
+	char letter;
+};
 
 //enumerator to help with printArray
 enum Type{
@@ -95,6 +101,7 @@ void mergeSortChar(char A[], int p, int r){
  * all the remaining values to 0 and returning the index of the last value
  */
 int noDuplicatesChar(char A[], int len){
+	mergeSortChar(A,0,len-1);
     char B[len];
     B[0] = A[0];
     int j = 1;
@@ -148,7 +155,7 @@ int noDuplicatesInt(int A[], int len){
     }
     j = i;
     while(i<len){
-        A[i] = -2;
+        A[i] = '0';
         i++;
     }
     return j;

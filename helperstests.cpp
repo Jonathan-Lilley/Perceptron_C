@@ -14,9 +14,9 @@ int main(){
     char A[] = {'c','b','d','a','a'};
     cout << "original: ";
     printArray(A,CHAR,sizeof(A)/sizeof(char));
-    mergeSortChar(A,0,sizeof(A)/sizeof(char)-1);
-    cout << endl << "sorted: ";
-    printArray(A,CHAR,sizeof(A)/sizeof(char));
+    //mergeSortChar(A,0,sizeof(A)/sizeof(char)-1);
+    //cout << endl << "sorted: ";
+    //printArray(A,CHAR,sizeof(A)/sizeof(char));
     int maxitem = noDuplicatesChar(A,sizeof(A)/sizeof(char));
     char C[maxitem];
     fillArrayChar(A,C,maxitem);
